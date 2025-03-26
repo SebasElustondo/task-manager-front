@@ -1,46 +1,76 @@
-# Getting Started with Create React App
+# Task Manager Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend application for the **Task Manager** project, built with React. It allows users to create, edit, delete, and manage tasks efficiently. The application is styled for responsiveness and includes features like a floating action button, error handling, and a modern UI.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Task Management**: Create, edit, and delete tasks.
+- **Responsive Design**: Fully responsive UI for desktop and mobile devices.
+- **Floating Action Button**: Quick access to create new tasks.
+- **Error Handling**: Displays error messages and retry options for failed API calls.
+- **Loading Spinner**: Modern spinner for better user experience during data fetching.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React**: Frontend library for building the user interface.
+- **React Router**: For navigation and routing.
+- **Font Awesome**: For icons.
+- **CSS Modules**: For scoped and maintainable styles.
+- **TypeScript**: For type safety and better developer experience.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+Follow these steps to set up the project locally:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+   ```
+   git clone https://github.com/SebasElustondo/task-manager-frontend.git
+   ```
 
-### `npm run build`
+2. Navigate to the project directory:
+    ```
+    cd task-manager-frontend
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. install dependencies:
+    ```
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To start the development server, run:
+   ```
+   npm start
+   ```
 
-### `npm run eject`
+## Folder Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+src/
+├── components/         # Reusable components (Header, Footer, etc.)
+├── pages/              # Page components (TaskListPage, EditTaskPage, etc.)
+├── services/           # API service functions
+├── types/              # TypeScript type definitions
+├── utils/              # Shared components
+├── App.tsx             # Main app component
+├── App.css             # Global styles
+└── index.tsx           # Entry point
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## API Integration
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This project interacts with a backend API for task management. Ensure the backend is running and accessible at the configured API URL.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Example API Endpoints
+* Get all tasks: GET /tasks
+* Get task by id: GET /tasks/:id
+* Create a task: POST /tasks
+* Edit a task: PUT /tasks/:id
+* Delete a task: DELETE /tasks/:id
 
-## Learn More
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Acknowledgments
+* React
+* Font Awesome
+* Create React App

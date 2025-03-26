@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import TaskListPage from './pages/TaskListPage/TaskListPage';
+import EditTaskPage from './pages/EditTaskPage/EditTaskPage';
+import CreateTaskPage from './pages/CreateTaskPage/CreateTaskPage';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+    return (
+        <Router>
+            <Header />
+            <main className="main-content">
+                <Routes>
+                    <Route path="/" element={<Navigate to="/tasks" />} />
+                    <Route path="/tasks" element={<TaskListPage />} />
+                    <Route path="/tasks/edit/:id" element={<EditTaskPage />} />
+                    <Route path="/tasks/create" element={<CreateTaskPage />} />
+                </Routes>
+            </main>
+            <Footer />
+        </Router>
+    );
+};
 
 export default App;
