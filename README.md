@@ -37,6 +37,11 @@ Follow these steps to set up the project locally:
     npm install
     ```
 
+4. Create a .env file in the root directory and configure the following variables:
+   ```
+    REACT_APP_API_URL=http://localhost:3000/tasks
+   ```
+
 ## Usage
 
 To start the development server, run:
