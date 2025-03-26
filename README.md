@@ -45,7 +45,7 @@ To start the development server, run:
    ```
 
 ## Folder Structure
-
+```
 src/
 ├── components/         # Reusable components (Header, Footer, etc.)
 ├── pages/              # Page components (TaskListPage, EditTaskPage, etc.)
@@ -55,6 +55,7 @@ src/
 ├── App.tsx             # Main app component
 ├── App.css             # Global styles
 └── index.tsx           # Entry point
+```
 
 ## API Integration
 
